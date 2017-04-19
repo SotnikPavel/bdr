@@ -1,0 +1,14 @@
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\WPF\bin\Debug\WPF.exe.config
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\WPF\bin\Debug\WPF.exe
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\WPF\bin\Debug\WPF.pdb
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\WPF\obj\Debug\WPF.csprojResolveAssemblyReference.cache
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\WPF\obj\Debug\MainWindow.g.cs
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\WPF\obj\Debug\App.g.cs
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\WPF\obj\Debug\WPF_MarkupCompile.cache
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\WPF\obj\Debug\WPF_MarkupCompile.lref
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\WPF\obj\Debug\MainWindow.baml
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\WPF\obj\Debug\WPF.g.resources
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\WPF\obj\Debug\WPF.Properties.Resources.resources
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\WPF\obj\Debug\WPF.csproj.GenerateResource.Cache
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\WPF\obj\Debug\WPF.exe
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\WPF\obj\Debug\WPF.pdb

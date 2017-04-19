@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.26403.3
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WPF", "WPF\WPF.csproj", "{3BE8A3AE-E219-47AF-9757-19A05120A646}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBWorker", "bdWorker\DBWorker.csproj", "{7E9328FB-FBFB-460B-B75F-49846B6F561C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleApp", "ConsoleApp\ConsoleApp.csproj", "{485B58E7-6C26-49F5-A52F-B743C887451F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{3BE8A3AE-E219-47AF-9757-19A05120A646}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3BE8A3AE-E219-47AF-9757-19A05120A646}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3BE8A3AE-E219-47AF-9757-19A05120A646}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E9328FB-FBFB-460B-B75F-49846B6F561C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E9328FB-FBFB-460B-B75F-49846B6F561C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E9328FB-FBFB-460B-B75F-49846B6F561C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E9328FB-FBFB-460B-B75F-49846B6F561C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{485B58E7-6C26-49F5-A52F-B743C887451F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{485B58E7-6C26-49F5-A52F-B743C887451F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{485B58E7-6C26-49F5-A52F-B743C887451F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{485B58E7-6C26-49F5-A52F-B743C887451F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

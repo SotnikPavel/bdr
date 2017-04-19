@@ -1,0 +1,13 @@
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\ConsoleApp\bin\Debug\ConsoleApp.exe.config
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\ConsoleApp\bin\Debug\ConsoleApp.exe
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\ConsoleApp\bin\Debug\ConsoleApp.pdb
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\ConsoleApp\bin\Debug\bdWorker.dll
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\ConsoleApp\bin\Debug\EntityFramework.dll
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\ConsoleApp\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\ConsoleApp\bin\Debug\bdWorker.pdb
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\ConsoleApp\bin\Debug\bdWorker.dll.config
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\ConsoleApp\bin\Debug\EntityFramework.xml
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\ConsoleApp\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\ConsoleApp\obj\Debug\ConsoleApp.csprojResolveAssemblyReference.cache
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\ConsoleApp\obj\Debug\ConsoleApp.exe
+C:\Users\suhan\Desktop\Study\Programming\SecondSemester\Project_BDR\bdr\WPF\ConsoleApp\obj\Debug\ConsoleApp.pdb
