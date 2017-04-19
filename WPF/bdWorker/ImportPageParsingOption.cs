@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace bdWorker
 {
-    class ImportPageParsingOption
+    public class ImportPageParsingOption
     {
+        public Guid Id { get; set; }
+        public string Field { get; set; }
+        public int Number { get; set; }
     }
 }

@@ -48,11 +48,38 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Cell.cs" />
+    <Compile Include="CellAdmission.cs" />
+    <Compile Include="CellConsumption.cs" />
+    <Compile Include="Component.cs" />
+    <Compile Include="ComponentClass.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="Consignment.cs" />
     <Compile Include="Country.cs" />
+    <Compile Include="Device.cs" />
+    <Compile Include="Editing.cs" />
+    <Compile Include="ExpenditureReason.cs" />
+    <Compile Include="ImportCSV.cs" />
+    <Compile Include="ImportPage.cs" />
+    <Compile Include="ImportPageParsingOption.cs" />
+    <Compile Include="ParsingPage.cs" />
+    <Compile Include="ParsingParameter.cs" />
+    <Compile Include="PhoneNumber.cs" />
     <Compile Include="Producer.cs" />
+    <Compile Include="Project_Device.cs" />
+    <Compile Include="Project.cs" />
+    <Compile Include="Provider.cs" />
+    <Compile Include="ShellType.cs" />
+    <Compile Include="Source.cs" />
+    <Compile Include="Status.cs" />
+    <Compile Include="Storage.cs" />
+    <Compile Include="TechnicalDocumentation.cs" />
+    <Compile Include="Unit.cs" />
+    <Compile Include="UnitType.cs" />
+    <Compile Include="User.cs" />
     <Compile Include="UserContext.cs" />
-    <Compile Include="Model.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Characteristic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

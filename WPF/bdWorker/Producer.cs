@@ -13,5 +13,6 @@ namespace bdWorker
         public string Description { get; set; }
         public Guid CountryId { get; set; }
         public Country Country { get; set; }
+        public List<Producer> Producers { get; set; }
     }
 }

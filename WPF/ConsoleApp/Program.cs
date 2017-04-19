@@ -14,7 +14,7 @@ namespace ConsoleApp
             using (UserContext DB = new UserContext())
             {
                 Country cn = new Country();
-                cn.Id = Guid.Empty;
+                cn.Id = Guid.NewGuid();
                 cn.Name = "123";
                 DB.Countries.Add(cn);
 

@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace bdWorker
 {
-    class TechnicalDocumentation
+    public class TechnicalDocumentation
     {
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public string Reference { get; set; }
+        public List<Component> Components { get; set; }
     }
 }

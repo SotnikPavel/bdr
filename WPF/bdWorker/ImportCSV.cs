@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace bdWorker
 {
-    class ImportCSV
+     public class ImportCSV
     {
+        public Guid Id { get; set; }
+        public string Path { get; set; }
     }
 }
