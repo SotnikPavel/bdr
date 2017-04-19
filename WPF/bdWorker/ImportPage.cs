@@ -6,7 +6,9 @@ using System.Threading.Tasks;
 
 namespace bdWorker
 {
-    class ImportPage
+    public class ImportPage
     {
+        public Guid Id { get; set; }
+        public Guid ComponentId { get; set; }
     }
 }

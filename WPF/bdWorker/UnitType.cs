@@ -6,7 +6,10 @@ using System.Threading.Tasks;
 
 namespace bdWorker
 {
-    class UnitType
+    public class UnitType
     {
+        public Guid Id { get; set; }
+        public int Name { get; set; }
+        public List<Unit> Units { get; set; }
     }
 }

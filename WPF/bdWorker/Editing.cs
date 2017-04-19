@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace bdWorker
 {
-    class Editing
+    public class Editing
     {
+        public Guid Id { get; set; }
     }
 }

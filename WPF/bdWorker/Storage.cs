@@ -6,7 +6,13 @@ using System.Threading.Tasks;
 
 namespace bdWorker
 {
-    class Storaage
+    public class Storage
     {
+        public Guid Id { get; set; }
+        public Guid StorageId { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public List<Storage> Storages { get; set; }
+        public List<Cell> Cells { get; set; }
     }
 }

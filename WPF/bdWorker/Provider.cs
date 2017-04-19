@@ -6,7 +6,14 @@ using System.Threading.Tasks;
 
 namespace bdWorker
 {
-    class Provider
+    public class Provider
     {
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public string Site { get; set; }
+        public string Address { get; set; }
+        public string Description { get; set; }
+        public List<Consignment> Consignments { get; set; }
+        public List<PhoneNumber> PhoneNumbers { get; set; }
     }
 }

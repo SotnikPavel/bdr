@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace bdWorker
 {
-    class Configuration
+    public class Configuration
     {
+        public Guid Id { get; set; }
+        public Guid UserId { get; set; }
+        public bool EditPermission { get; set; }
+        public User User { get; set; }
     }
 }

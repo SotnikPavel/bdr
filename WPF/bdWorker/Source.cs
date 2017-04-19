@@ -6,7 +6,11 @@ using System.Threading.Tasks;
 
 namespace bdWorker
 {
-    class Source
+    public class Source
     {
+        public Guid Id { get; set; }
+        public string URL { get; set; }
+        public decimal Delay { get; set; }
+        public List<ParsingPage> ParsingPages { get; set; }
     }
 }

@@ -6,7 +6,15 @@ using System.Threading.Tasks;
 
 namespace bdWorker
 {
-    class Project
+    public class Project
     {
+        public Guid Id { get; set; }
+        public string Name { get; set; }
+        public string Description { get; set; }
+        public string BeginingDate { get; set; }
+        public string EndDate { get; set; }
+        public Guid StatusId { get; set; }
+        public Status Status { get; set; }
+        public List<Project_Device> Projects_Devices { get; set; }
     }
 }
