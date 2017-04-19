@@ -1,0 +1,5 @@
+/WPF/ConsoleApp/obj/Debug/*.cache
+*.cache
+bin
+obj
+/WPF/WPF/obj
