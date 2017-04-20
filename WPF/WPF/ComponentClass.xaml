@@ -1,0 +1,46 @@
+﻿<Window x:Class="BDR.классы"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:BDR"
+        mc:Ignorable="d"
+        Title="классы элементов" Height="300" Width="530" MinWidth="530">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="18"></RowDefinition>
+            <RowDefinition Height="18"></RowDefinition>
+            <RowDefinition></RowDefinition>
+
+        </Grid.RowDefinitions>
+        <Menu x:Name="menu" Grid.Row="0">
+            <MenuItem >
+                <MenuItem.Header>Копия</MenuItem.Header>
+            </MenuItem>
+            <MenuItem >
+                <MenuItem.Header>Изменить</MenuItem.Header>
+            </MenuItem>
+            <MenuItem >
+                <MenuItem.Header>Удалить</MenuItem.Header>
+            </MenuItem>
+            <MenuItem >
+                <MenuItem.Header>Обновить</MenuItem.Header>
+            </MenuItem>
+            <MenuItem >
+                <MenuItem.Header>Типы элем.</MenuItem.Header>
+            </MenuItem>
+            <MenuItem >
+                <MenuItem.Header>Баз.парам.</MenuItem.Header>
+            </MenuItem>
+            <MenuItem >
+                <MenuItem.Header>Добавить</MenuItem.Header>
+            </MenuItem>
+            <MenuItem >
+                <MenuItem.Header>Прайс</MenuItem.Header>
+            </MenuItem>
+        </Menu>
+        <TextBox x:Name="textBox" Grid.Row="1"/>
+        <TreeView HorizontalAlignment="Left" VerticalAlignment="Top" />
+    </Grid>
+
+</Window>
