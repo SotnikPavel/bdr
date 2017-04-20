@@ -11,6 +11,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBWorker", "DBWorker\DBWork
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DBModel", "DBModel\DBModel.csproj", "{A7C62286-FCF8-4215-BAD1-6D3DFAA2DBCF}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataWorker", "DataWorker\DataWorker.csproj", "{E3B63811-8823-4E85-89D6-4275741C3A80}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -33,6 +35,10 @@ Global
 		{A7C62286-FCF8-4215-BAD1-6D3DFAA2DBCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A7C62286-FCF8-4215-BAD1-6D3DFAA2DBCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A7C62286-FCF8-4215-BAD1-6D3DFAA2DBCF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E3B63811-8823-4E85-89D6-4275741C3A80}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E3B63811-8823-4E85-89D6-4275741C3A80}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E3B63811-8823-4E85-89D6-4275741C3A80}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E3B63811-8823-4E85-89D6-4275741C3A80}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

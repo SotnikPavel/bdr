@@ -17,19 +17,14 @@ namespace BDR
     /// <summary>
     /// Логика взаимодействия для классы.xaml
     /// </summary>
-    public partial class классы : Window
+    public partial class ComponentClass : Window
     {
-        public классы()
+        public ComponentClass()
         {
             InitializeComponent();
         }
 
         private void textBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
-
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
 
         }

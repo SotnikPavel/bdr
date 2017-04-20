@@ -100,5 +100,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\DataWorker\DataWorker.csproj">
+      <Project>{e3b63811-8823-4e85-89d6-4275741c3a80}</Project>
+      <Name>DataWorker</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DBWorker\DBWorker.csproj">
+      <Project>{ac880c33-4864-4fa7-9423-c390aa5d4697}</Project>
+      <Name>DBWorker</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

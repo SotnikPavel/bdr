@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using DataWorker.ComponentClass;
+using DBWorker;
 
 namespace BDR
 {
@@ -23,6 +25,21 @@ namespace BDR
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            DBWorker.DBWorker dbw = new DBWorker.DBWorker();
+            ComponentClassWorker ccw = new ComponentClassWorker();
+
+            foreach(var tcomponentClass in dbw.LevelComponentClassList(Guid.Empty).FirstOrDefault().ComponentClasses)
+            {
+                ccw.ComponentClassS.Add(tcomponentClass);
+            }
+
+            ComponentClass сomponentClass = new ComponentClass();
+            сomponentClass.DataContext = ccw;
+            сomponentClass.ShowDialog();
         }
     }
 }

@@ -9,7 +9,7 @@ namespace DBModel
 {
     public class UserContext:DbContext
     {
-        public UserContext() : base("Data Source=bdrinstanse.c29uy4nro3g3.us-west-2.rds.amazonaws.com;Initial Catalog=bdr(20.04.2018);User ID=bdruser;Password=123ewqasdcxz")
+        public UserContext() : base("Data Source=bdrinstanse.c29uy4nro3g3.us-west-2.rds.amazonaws.com;Initial Catalog=bdr(20.04.2019);User ID=bdruser;Password=123ewqasdcxz")
         {
         }
         public DbSet<Cell> Cells { get; set; }

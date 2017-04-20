@@ -1,4 +1,4 @@
-﻿<Window x:Class="BDR.классы"
+﻿<Window x:Class="BDR.ComponentClass"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
@@ -38,7 +38,15 @@
                 <MenuItem.Header>Прайс</MenuItem.Header>
             </MenuItem>
         </Menu>
-        <TreeView Grid.Row="1" />
+        <TreeView Grid.Row="1" ItemsSource="{Binding Path=ComponentClassS}">
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding Path=ComponentClasses}" >
+                    <StackPanel Orientation="Horizontal">
+                        <TextBlock Text="{Binding Name}"></TextBlock>
+                    </StackPanel>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>
+        </TreeView>
     </Grid>
 
 </Window>
