@@ -4,16 +4,15 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{485B58E7-6C26-49F5-A52F-B743C887451F}</ProjectGuid>
-    <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleApp</RootNamespace>
-    <AssemblyName>ConsoleApp</AssemblyName>
+    <ProjectGuid>{7E9328FB-FBFB-460B-B75F-49846B6F561C}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>bdWorker</RootNamespace>
+    <AssemblyName>bdWorker</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
-    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugSymbols>true</DebugSymbols>
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
@@ -23,7 +22,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
-    <PlatformTarget>AnyCPU</PlatformTarget>
     <DebugType>pdbonly</DebugType>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
@@ -34,6 +32,7 @@
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.1.3\lib\net45\EntityFramework.SqlServer.dll</HintPath>
@@ -49,22 +48,42 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Program.cs" />
+    <Compile Include="Cell.cs" />
+    <Compile Include="CellAdmission.cs" />
+    <Compile Include="CellConsumption.cs" />
+    <Compile Include="Component.cs" />
+    <Compile Include="ComponentClass.cs" />
+    <Compile Include="Configuration.cs" />
+    <Compile Include="Consignment.cs" />
+    <Compile Include="Country.cs" />
+    <Compile Include="Device.cs" />
+    <Compile Include="Editing.cs" />
+    <Compile Include="ExpenditureReason.cs" />
+    <Compile Include="ImportCSV.cs" />
+    <Compile Include="ImportPage.cs" />
+    <Compile Include="ImportPageParsingOption.cs" />
+    <Compile Include="ParsingPage.cs" />
+    <Compile Include="ParsingParameter.cs" />
+    <Compile Include="PhoneNumber.cs" />
+    <Compile Include="Producer.cs" />
+    <Compile Include="Project_Device.cs" />
+    <Compile Include="Project.cs" />
+    <Compile Include="Provider.cs" />
+    <Compile Include="ShellType.cs" />
+    <Compile Include="Source.cs" />
+    <Compile Include="Status.cs" />
+    <Compile Include="Storage.cs" />
+    <Compile Include="TechnicalDocumentation.cs" />
+    <Compile Include="Unit.cs" />
+    <Compile Include="UnitType.cs" />
+    <Compile Include="User.cs" />
+    <Compile Include="UserContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Characteristic.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
     <None Include="packages.config" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\DBModel\DBModel.csproj">
-      <Project>{a7c62286-fcf8-4215-bad1-6d3dfaa2dbcf}</Project>
-      <Name>DBModel</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\DBWorker\DBWorker.csproj">
-      <Project>{ac880c33-4864-4fa7-9423-c390aa5d4697}</Project>
-      <Name>DBWorker</Name>
-    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

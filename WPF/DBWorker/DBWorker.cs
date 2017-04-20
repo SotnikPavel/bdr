@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DBWorker
 {
-    public class Class1
+    public class DBWorker
     {
     }
 }

@@ -9,7 +9,6 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="18"></RowDefinition>
-            <RowDefinition Height="18"></RowDefinition>
             <RowDefinition></RowDefinition>
 
         </Grid.RowDefinitions>
@@ -39,8 +38,7 @@
                 <MenuItem.Header>Прайс</MenuItem.Header>
             </MenuItem>
         </Menu>
-        <TextBox x:Name="textBox" Grid.Row="1"/>
-        <TreeView HorizontalAlignment="Left" VerticalAlignment="Top" />
+        <TreeView Grid.Row="1" />
     </Grid>
 
 </Window>

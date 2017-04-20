@@ -5,11 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.Entity;
 
-namespace bdWorker
+namespace DBModel
 {
     public class UserContext:DbContext
     {
-        public UserContext() : base("Data Source=bdrinstanse.c29uy4nro3g3.us-west-2.rds.amazonaws.com;Initial Catalog=bdr(20.04.2017);User ID=bdruser;Password=123ewqasdcxz")
+        public UserContext() : base("Data Source=bdrinstanse.c29uy4nro3g3.us-west-2.rds.amazonaws.com;Initial Catalog=bdr(20.04.2018);User ID=bdruser;Password=123ewqasdcxz")
         {
         }
         public DbSet<Cell> Cells { get; set; }
