@@ -13,6 +13,8 @@ namespace ConsoleApp
         {
             using (UserContext DB = new UserContext())
             {
+                resp r = new resp();
+                r.tovarParser("","","","");
                 Country cn = new Country();
                 cn.Id = Guid.NewGuid();
                 cn.Name = "123";
