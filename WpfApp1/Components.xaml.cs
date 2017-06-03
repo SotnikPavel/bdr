@@ -49,5 +49,10 @@ namespace WpfApp1
             }
             Reload();
         }
+
+        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
