@@ -1,3 +1,0 @@
-# bdr
-rk
-test

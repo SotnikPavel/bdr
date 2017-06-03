@@ -1,6 +1,7 @@
-/WPF/ConsoleApp/obj/Debug/*.cache
-*.cache
-bin
-obj
-/WPF/WPF/obj
-/WPF/.vs
+*.exe
+Debug
+tools
+net40
+content
+net45
+EntityFramework.6.1.3
