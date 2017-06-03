@@ -1,0 +1,38 @@
+﻿<Window x:Class="WpfApp1.TypeElement"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="TypeElement" Height="300" Width="300">
+    <Grid Margin="0,0,3.333,7.667">
+
+        <Menu x:Name="menu" HorizontalAlignment="Left" Height="39" VerticalAlignment="Top" Width="280">
+            <MenuItem Header="Добавить" Click="Add_click" />
+            <MenuItem Header="Копия"/>
+            <MenuItem Header="Изменить"/>
+            <MenuItem Header="Удалить"/>
+            <MenuItem Header="Обновить"/>
+            <MenuItem Header="Параметры"/>
+            <MenuItem Header="Прайс"/>
+            <MenuItem Header="Наличие"/>
+            <MenuItem Header="Аналоги"/>
+        </Menu>
+        <TextBox x:Name="textBox" HorizontalAlignment="Left" Height="16" Margin="0,39,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="503"/>
+        <ListView x:Name="listView" HorizontalAlignment="Left" Margin="0,55,0,25.667" Width="295">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="100" Header="Наименование"/>
+                    <GridViewColumn Width="80" Header="Маркировка"/>
+                    <GridViewColumn Width="120" Header="Описание"/>
+                    <GridViewColumn Width="80" Header="Корпус"/>
+                    <GridViewColumn Width="120" Header="Производитель"/>
+
+                </GridView>
+            </ListView.View>
+            <ScrollViewer  Height="100" VerticalAlignment="Top" Width="100"/>
+        </ListView>
+
+    </Grid>
+</Window>

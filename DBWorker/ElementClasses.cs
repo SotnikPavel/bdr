@@ -10,12 +10,37 @@ namespace DBWorker
 {
     public class ElementClasses
     {
+        public static void Delete(Guid id)
+        {
+            using (UserContext context = new UserContext())
+            {
+                var componentClass = context.ComponentClasses.Where(o => o.Id == id).FirstOrDefault();
+                CascadeDelete(id);
+                context.ComponentClasses.Remove(componentClass);
+                context.SaveChanges();
+            }
+        }
+        public static void CascadeDelete(Guid parentId)
+        {
+            using (UserContext context = new UserContext())
+            {
+                var listComponentClass = context.ComponentClasses.Where(o => o.ComponentClassId == parentId).ToList();
+                foreach(var componentClass in listComponentClass)
+                {
+                    CascadeDelete(componentClass.Id);
+                    context.ComponentClasses.Remove(componentClass);
+                }
+                context.SaveChanges();
+            }
+        }
+
         public static ComponentClass GetById(Guid id)
         {
             ComponentClass componentClass;
             using (UserContext DB = new UserContext())
             {
-                componentClass = DB.ComponentClasses.Where(n => n.Id == id).FirstOrDefault();
+                componentClass = DB.ComponentClasses.Where(n => n.Id == id).FirstOrDefault(); 
+
             }
             return componentClass;
         }

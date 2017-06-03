@@ -39,5 +39,24 @@ namespace WpfApp1
             ObservableCollection<DataWorker.ElementClasses> ec = dw.ElementClassesData;
             DataContext = ec;
         }
+
+        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        {
+            if(ElementsClasses.SelectedItem != null)
+            {
+
+                DBWorker.ElementClasses.Delete(((DataWorker.ElementClasses)ElementsClasses.SelectedItem).Id);
+            }
+            Reload();
+        }
+
+        private void TypeElementcall(object sender, RoutedEventArgs e)
+            
+        {
+            TypeElement typeelem = new TypeElement();
+            typeelem.ShowDialog();
+            
+        }
+        
     }
 }

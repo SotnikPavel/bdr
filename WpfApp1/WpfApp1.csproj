@@ -64,6 +64,12 @@
     <Compile Include="Reports.xaml.cs">
       <DependentUpon>Reports.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ElementClasses\TypeElement.xaml.cs">
+      <DependentUpon>TypeElement.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ElementClasses\TypeElementAdd.xaml.cs">
+      <DependentUpon>TypeElementAdd.xaml</DependentUpon>
+    </Compile>
     <Page Include="Components.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -80,7 +86,7 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ElementClasses.xaml">
+    <Page Include="ElementClasses\ElementClasses.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -112,7 +118,7 @@
     <Compile Include="ElementBodiesAdd.xaml.cs">
       <DependentUpon>ElementBodiesAdd.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ElementClasses.xaml.cs">
+    <Compile Include="ElementClasses\ElementClasses.xaml.cs">
       <DependentUpon>ElementClasses.xaml</DependentUpon>
     </Compile>
     <Compile Include="ElementClassesAdd.xaml.cs">
@@ -134,6 +140,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Reports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ElementClasses\TypeElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ElementClasses\TypeElementAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

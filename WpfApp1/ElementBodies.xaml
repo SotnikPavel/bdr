@@ -13,10 +13,8 @@
         </Grid.RowDefinitions>
         <Menu x:Name="menu" Grid.Row="0">
             <MenuItem Header="Добавить" Click="MenuItem_Click"/>
-            <MenuItem Header="Копия"/>
             <MenuItem Header="Изменить"/>
             <MenuItem Header="Удалить"/>
-            <MenuItem Header="Обновить"/>
             <MenuItem Header="Типы эл."/>
         </Menu>
         <ListView x:Name="listView" Grid.Row="1" ItemsSource="{Binding .}">
