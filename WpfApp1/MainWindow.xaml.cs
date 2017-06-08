@@ -20,39 +20,65 @@ namespace WpfApp1
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+        Guid userId;
+        int lang;
+        public MainWindow(Guid userId, int lang)
         {
             InitializeComponent();
+            this.userId = userId;
+            this.lang = lang;
+            if(lang == 1)
+            {
+                Classes.Header = "Бүлек";
+                Import.Header = "Импорт";
+                Report.Header = "Хисап";
+                Propertys.Header = "Җайга салу";
+                Components.Header = "Детальләрен";
+                Shells.Header = "Корпусын";
+                Producters.Header = "Җитештерүчеләр";
+            }
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            ElementClasses elementClasses = new ElementClasses();
+            ElementClasses elementClasses = new ElementClasses(lang, userId);
             elementClasses.ShowDialog();
         }
 
         private void MenuItem_Click_1(object sender, RoutedEventArgs e)
         {
-            ElementBodies elementBodies = new ElementBodies();
+            ElementBodies elementBodies = new ElementBodies(lang, userId);
             elementBodies.ShowDialog();
         }
 
         private void MenuItem_Click_2(object sender, RoutedEventArgs e)
         {
-            Producer producer = new Producer();
+            Producer producer = new Producer(lang, userId);
             producer.ShowDialog();
         }
 
         private void MenuItem_Click_3(object sender, RoutedEventArgs e)
         {
-            Components components = new Components();
+            Components components = new Components(lang, userId);
             components.ShowDialog();
         }
 
         private void MenuItem_Click_4(object sender, RoutedEventArgs e)
         {
-            Reports Reports = new Reports();
+            Reports Reports = new Reports(userId);
             Reports.ShowDialog();
+        }
+
+        private void MenuItem_Click_5(object sender, RoutedEventArgs e)
+        {
+            Parsing parsing = new Parsing(userId);
+            parsing.ShowDialog();
+        }
+
+        private void MenuItem_Click_6(object sender, RoutedEventArgs e)
+        {
+            Settings set = new Settings(lang, userId);
+            set.ShowDialog();
         }
     }
 }

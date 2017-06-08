@@ -15,13 +15,14 @@ using System.Windows.Shapes;
 namespace WpfApp1
 {
     /// <summary>
-    /// Логика взаимодействия для TypeElementAdd.xaml
+    /// Логика взаимодействия для Error.xaml
     /// </summary>
-    public partial class TypeElementAdd : Window
+    public partial class Error : Window
     {
-        public TypeElementAdd()
+        public Error(string text)
         {
             InitializeComponent();
+            ErrorText.Text = text;
         }
     }
 }

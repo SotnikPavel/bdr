@@ -8,6 +8,7 @@ namespace DBModel
 {
     public class Component
     {
+        public Guid UserId { get; set; }
         public Guid Id { get; set; }
         public string Name { get; set; }
         public Guid ShellTypeId { get; set; }
@@ -21,6 +22,6 @@ namespace DBModel
         public List<Device> Devices { get; set; }
         public ShellType ShellType { get; set; }
         public Producer Producer { get; set; }
-        public ComponentClass ComponentClass { get; set; }
+        public TypeElement TypeElement { get; set; }
     }
 }

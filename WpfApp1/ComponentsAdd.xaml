@@ -60,7 +60,7 @@
                     <ColumnDefinition Width="0.5*"></ColumnDefinition>
                     <ColumnDefinition Width="0.5*"></ColumnDefinition>
                 </Grid.ColumnDefinitions>
-                <Label Content="Базовый класс" Grid.Column="0"/>
+                <Label Content="Базовый тип элемента" Grid.Column="0"/>
                 <Button Name="Parent" Content="..." Grid.Column="1" Click="Parent_Click"/>
             </Grid>
             <Grid Grid.Row="4">

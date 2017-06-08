@@ -21,6 +21,7 @@ namespace WpfApp1
     public partial class ElementClassesBaseClassSelect : Window
     {
         public DataWorker.ElementClasses BaseElement { get; set; }
+        Guid UserId;
         public ElementClassesBaseClassSelect()
         {
             InitializeComponent();
@@ -30,7 +31,7 @@ namespace WpfApp1
         private void LoadContext()
         {
             DataWorker.ElementClasses dw = new DataWorker.ElementClasses();
-            dw.Load();
+            dw.Load(UserId);
             ObservableCollection<DataWorker.ElementClasses> ec = dw.ElementClassesData;
             DataContext = ec;
         }

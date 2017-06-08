@@ -61,20 +61,60 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ComponentsChange.xaml.cs">
+      <DependentUpon>ComponentsChange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ElementBodiesChange.xaml.cs">
+      <DependentUpon>ElementBodiesChange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ElementClassesChange.xaml.cs">
+      <DependentUpon>ElementClassesChange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Error.xaml.cs">
+      <DependentUpon>Error.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Login.xaml.cs">
+      <DependentUpon>Login.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Parsing.xaml.cs">
+      <DependentUpon>Parsing.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ParsingTeamplateAdd.xaml.cs">
+      <DependentUpon>ParsingTeamplateAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ParsingTypeSelect.xaml.cs">
+      <DependentUpon>ParsingTypeSelect.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProducterChange.xaml.cs">
+      <DependentUpon>ProducterChange.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Reports.xaml.cs">
       <DependentUpon>Reports.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ElementClasses\TypeElement.xaml.cs">
+    <Compile Include="Settings.xaml.cs">
+      <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TypeElement.xaml.cs">
       <DependentUpon>TypeElement.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ElementClasses\TypeElementAdd.xaml.cs">
+    <Compile Include="TypeElementAdd.xaml.cs">
       <DependentUpon>TypeElementAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TypeElementChange.xaml.cs">
+      <DependentUpon>TypeElementChange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TypeElementClassesBaseClassSelect.xaml.cs">
+      <DependentUpon>TypeElementClassesBaseClassSelect.xaml</DependentUpon>
     </Compile>
     <Page Include="Components.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ComponentsAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComponentsChange.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -86,7 +126,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ElementClasses\ElementClasses.xaml">
+    <Page Include="ElementBodiesChange.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ElementClasses.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -95,6 +139,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ElementClassesBaseClassSelect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ElementClassesChange.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Error.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Login.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -118,7 +174,7 @@
     <Compile Include="ElementBodiesAdd.xaml.cs">
       <DependentUpon>ElementBodiesAdd.xaml</DependentUpon>
     </Compile>
-    <Compile Include="ElementClasses\ElementClasses.xaml.cs">
+    <Compile Include="ElementClasses.xaml.cs">
       <DependentUpon>ElementClasses.xaml</DependentUpon>
     </Compile>
     <Compile Include="ElementClassesAdd.xaml.cs">
@@ -131,6 +187,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Parsing.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ParsingTeamplateAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ParsingTypeSelect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Producer.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -139,15 +207,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ProducterChange.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Reports.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ElementClasses\TypeElement.xaml">
+    <Page Include="Settings.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="ElementClasses\TypeElementAdd.xaml">
+    <Page Include="TypeElement.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TypeElementAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TypeElementChange.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TypeElementClassesBaseClassSelect.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -197,6 +281,10 @@
     <ProjectReference Include="..\DBWorker\DBWorker.csproj">
       <Project>{32c0b285-27f2-4b44-b765-b592835120ae}</Project>
       <Name>DBWorker</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Parsing\Parsing.csproj">
+      <Project>{cd085fc5-aa95-4ed1-863c-ee4c91fced98}</Project>
+      <Name>Parsing</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

@@ -20,22 +20,30 @@ namespace WpfApp1
     /// </summary>
     public partial class Components : Window
     {
-        public Components()
+        Guid UserId;
+        public Components(int lang, Guid userId)
         {
             InitializeComponent();
+            UserId = userId;
+            if (lang == 1)
+            {
+                Add.Header = "Өстәргә";
+                Change.Header = "Үзгәртергә";
+                Delete.Header = "Бетерә";
+            }
             Reload();
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            ComponentsAdd componentsAdd = new ComponentsAdd();
+            ComponentsAdd componentsAdd = new ComponentsAdd(UserId);
             componentsAdd.ShowDialog();
             Reload();
         }
         private void Reload()
         {
             DataWorker.Components dw = new DataWorker.Components();
-            ObservableCollection<DataWorker.Component> ec = dw.GetList();
+            ObservableCollection<DataWorker.Component> ec = dw.GetList(UserId);
             DataContext = ec;
         }
 
@@ -50,9 +58,16 @@ namespace WpfApp1
             Reload();
         }
 
-        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
+        private void Change_Click(object sender, RoutedEventArgs e)
         {
-
+            var t = listView.SelectedItem;
+            if (t != null)
+            {
+                ComponentsChange componentsChange = new ComponentsChange((DataWorker.Component)listView.SelectedItem);
+                componentsChange.ShowDialog();
+                Reload();
+            }
+            Reload();
         }
     }
 }

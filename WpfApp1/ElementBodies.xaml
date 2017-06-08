@@ -12,15 +12,15 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Menu x:Name="menu" Grid.Row="0">
-            <MenuItem Header="Добавить" Click="MenuItem_Click"/>
-            <MenuItem Header="Изменить"/>
-            <MenuItem Header="Удалить"/>
-            <MenuItem Header="Типы эл."/>
+            <MenuItem Name="Add"  Header="Добавить" Click="MenuItem_Click"/>
+        
+            <MenuItem Name="Change" Header="Изменить" Click="Change_Click"/>
+            <MenuItem Name="Delete" Header="Удалить" Click="Delete_Click"/>
         </Menu>
         <ListView x:Name="listView" Grid.Row="1" ItemsSource="{Binding .}">
             <ListView.View>
                 <GridView>
-                    <GridViewColumn Width="120" Header="Тип" DisplayMemberBinding="{Binding Path=Name}" />
+                    <GridViewColumn   Width="120" Header="Тип" DisplayMemberBinding="{Binding Path=Name}" />
                     <GridViewColumn Width="120" Header="Описание" DisplayMemberBinding="{Binding Path=Description}"/>
                     <GridViewColumn Width="95" Header="Кол-во выводов" DisplayMemberBinding="{Binding Path=PinsQuantity}"/>
                 </GridView>

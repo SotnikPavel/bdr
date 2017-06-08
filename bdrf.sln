@@ -15,6 +15,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfApp1", "WpfApp1\WpfApp1.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataWorker", "DataWorker\DataWorker.csproj", "{AB3723E2-B8EC-4EED-B0F7-3D07880FAB64}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Parsing", "Parsing\Parsing.csproj", "{CD085FC5-AA95-4ED1-863C-EE4C91FCED98}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -45,6 +47,10 @@ Global
 		{AB3723E2-B8EC-4EED-B0F7-3D07880FAB64}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AB3723E2-B8EC-4EED-B0F7-3D07880FAB64}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{AB3723E2-B8EC-4EED-B0F7-3D07880FAB64}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CD085FC5-AA95-4ED1-863C-EE4C91FCED98}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CD085FC5-AA95-4ED1-863C-EE4C91FCED98}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CD085FC5-AA95-4ED1-863C-EE4C91FCED98}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CD085FC5-AA95-4ED1-863C-EE4C91FCED98}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

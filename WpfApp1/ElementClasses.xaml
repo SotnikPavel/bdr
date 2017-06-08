@@ -7,38 +7,26 @@
         mc:Ignorable="d"
         Title="Классы элементов" Height="300" MinWidth="600" Width="600">
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="295*"/>
-            <ColumnDefinition Width="2*"/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
             <RowDefinition Height="18"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
-        <Menu x:Name="menu" Grid.Row="0" Grid.ColumnSpan="2" Margin="0,0,0.333,0">
-            <MenuItem >
-                <MenuItem.Header>Копия</MenuItem.Header>
-            </MenuItem>
-            <MenuItem >
+        <Menu x:Name="menu" Grid.Row="0">
+            <MenuItem Name="Change" Click="Change_Click">
                 <MenuItem.Header>Изменить</MenuItem.Header>
             </MenuItem>
-            <MenuItem Click="MenuItem_Click_1" >
+            <MenuItem Name="Delete" Click="Delete_Click" >
                 <MenuItem.Header>Удалить</MenuItem.Header>
             </MenuItem>
-            <MenuItem Click="TypeElementcall" >
+            <MenuItem Name="TypeEl" Click="MenuItem_Click_1">
                 <MenuItem.Header>Типы элем.</MenuItem.Header>
             </MenuItem>
-            <MenuItem >
-                <MenuItem.Header>Баз.парам.</MenuItem.Header>
-            </MenuItem>
-            <MenuItem Click="MenuItem_Click" >
+            <MenuItem Name="Add" Click="MenuItem_Click" >
                 <MenuItem.Header>Добавить</MenuItem.Header>
             </MenuItem>
-            <MenuItem >
-                <MenuItem.Header>Прайс</MenuItem.Header>
-            </MenuItem>
+           
         </Menu>
-        <TreeView Name="ElementsClasses" Grid.Row="1" ItemsSource="{Binding Path=.}" Grid.ColumnSpan="2" Margin="0,0,0.333,-0.333">
+        <TreeView  Name="list" Grid.Row="1" ItemsSource="{Binding Path=.}">
             <TreeView.ItemTemplate>
                 <HierarchicalDataTemplate ItemsSource="{Binding Path=ElementClassesData}" >
                     <StackPanel Orientation="Horizontal">

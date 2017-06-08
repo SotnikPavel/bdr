@@ -19,10 +19,12 @@ namespace WpfApp1
     /// </summary>
     public partial class ComponentsAdd : Window
     {
-        private DataWorker.ElementClasses baseElement = new DataWorker.ElementClasses();
-        public ComponentsAdd()
+        private DataWorker.TypeElementClasses baseElement = new DataWorker.TypeElementClasses();
+        Guid UserId;
+        public ComponentsAdd(Guid userId)
         {
             InitializeComponent();
+            UserId = userId;
             Load();
         }
 
@@ -38,7 +40,7 @@ namespace WpfApp1
             {
                 bodyId = ((DBModel.ShellType)(ElementBody.SelectedItem)).Id;
             }
-            DBWorker.Components.Add(Name.Text, producerId, bodyId, baseElement.Id);
+            DBWorker.Components.Add(UserId,Name.Text, producerId, bodyId, baseElement.Id);
             Close();
         }
 
@@ -51,7 +53,7 @@ namespace WpfApp1
 
         private void Parent_Click(object sender, RoutedEventArgs e)
         {
-            ElementClassesBaseClassSelect elementClassesBaseClassSelect = new ElementClassesBaseClassSelect { };
+            TypeElementClassesBaseClassSelect elementClassesBaseClassSelect = new TypeElementClassesBaseClassSelect { };
             elementClassesBaseClassSelect.ShowDialog();
 
             if (elementClassesBaseClassSelect.BaseElement != null)

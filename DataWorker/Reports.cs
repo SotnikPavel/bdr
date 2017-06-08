@@ -10,14 +10,14 @@ namespace DataWorker
 {
     public class Reports
     {
-        public static void SaveReport()
+        public static void SaveReport(Guid userId)
         {
             FolderBrowserDialog folderBrowser = new FolderBrowserDialog();
             DialogResult result = folderBrowser.ShowDialog();
             if (!string.IsNullOrWhiteSpace(folderBrowser.SelectedPath))
             {
                 Components components = new Components();
-                var rcomponents = components.GetList();
+                var rcomponents = components.GetList(userId);
                 string text ="Название;Класс;Тип;Производитель\n";
                 foreach (var rcomponent in rcomponents)
                 {

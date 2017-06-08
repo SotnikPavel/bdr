@@ -20,14 +20,16 @@ namespace WpfApp1
     /// </summary>
     public partial class Reports : Window
     {
-        public Reports()
+        Guid UserId;
+        public Reports(Guid userId)
         {
             InitializeComponent();
+            UserId = userId;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            DataWorker.Reports.SaveReport();
+            DataWorker.Reports.SaveReport(UserId);
             Close();
         }
     }

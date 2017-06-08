@@ -1,0 +1,27 @@
+﻿<Window x:Class="WpfApp1.Parsing"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Parsing" Height="300" Width="400">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="20"></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <Menu Grid.Row="0">
+            <MenuItem Header="Добавить шаблон парсинга" Click="MenuItem_Click"></MenuItem>
+            <MenuItem Header="Выполнить" Click="MenuItem_Click_1"></MenuItem>
+            <MenuItem Header="Удалить" Click="MenuItem_Click_2"></MenuItem>
+        </Menu>
+        <ListView Name="parsingTeamplates" Grid.Row="1" ItemsSource="{Binding .}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="120" Header="Название" DisplayMemberBinding="{Binding Path=.}" />
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

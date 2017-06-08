@@ -12,11 +12,9 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Menu x:Name="menu" Grid.Row="0">
-            <MenuItem Header="Добавить" Click="MenuItem_Click"/>
-            <MenuItem Header="Копия"/>
-            <MenuItem Header="Изменить" Click="MenuItem_Click_2"/>
-            <MenuItem Header="Удалить" Click="MenuItem_Click_1"/>
-            <MenuItem Header="Обновить"/>
+            <MenuItem Name="Add" Header="Добавить" Click="MenuItem_Click"/>
+            <MenuItem Name="Change" Header="Изменить" Click="Change_Click"/>
+            <MenuItem Name="Delete" Header="Удалить" Click="MenuItem_Click_1"/>
         </Menu>
         <ListView Name="listView" Grid.Row="1" ItemsSource="{Binding .}">
             <ListView.View>

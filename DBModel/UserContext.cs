@@ -43,5 +43,7 @@ namespace DBModel
         public DbSet<Unit> Units { get; set; }
         public DbSet<UnitType> UnitTypes { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<ParsingComponents> ParsingComponents { get; set; }
+        public DbSet<TypeElement> TypeElements { get; set; }
     }
 }

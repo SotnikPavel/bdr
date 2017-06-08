@@ -8,6 +8,7 @@ namespace DBModel
 {
     public class ShellType
     {
+        public Guid UserId { get; set; }
         public Guid Id { get; set; }
         public string Name { get; set; }
         public string Description { get; set; }
@@ -15,6 +16,5 @@ namespace DBModel
         public string InstallationType { get; set; }
         public int PinsQuantity { get; set; }
         public List<Component> Components { get; set; }
-        
     }
 }

@@ -19,15 +19,17 @@ namespace WpfApp1
     /// </summary>
     public partial class ProducerAdd : Window
     {
-        public ProducerAdd()
+        Guid UserId;
+        public ProducerAdd(Guid userId)
         {
             InitializeComponent();
+            UserId = userId;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             DBWorker.Producers dw = new DBWorker.Producers();
-            dw.Add(Name.Text, Description.Text);
+            dw.Add(UserId, Name.Text, Description.Text);
             Close();
         }
     }

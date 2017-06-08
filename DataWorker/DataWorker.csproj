@@ -46,8 +46,10 @@
     <Compile Include="Components.cs" />
     <Compile Include="ComponentsAdd.cs" />
     <Compile Include="ElementClasses.cs" />
+    <Compile Include="Parsing.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Reports.cs" />
+    <Compile Include="TypeElementClasses.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\DBModel\DBModel.csproj">

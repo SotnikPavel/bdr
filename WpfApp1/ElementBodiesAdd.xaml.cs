@@ -19,15 +19,19 @@ namespace WpfApp1
     /// </summary>
     public partial class ElementBodiesAdd : Window
     {
-        public ElementBodiesAdd()
+        Guid UserId;
+        public ElementBodiesAdd(Guid userId)
         {
+            UserId = userId;
             InitializeComponent();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             DBWorker.ShellTypes DBWorker = new DBWorker.ShellTypes();
-            DBWorker.Add(Name.Text, Description.Text, int.Parse(PinCount.Text));
+            int rPinCount;
+            int.TryParse(PinCount.Text, out rPinCount);
+            DBWorker.Add(UserId, Name.Text, Description.Text, rPinCount);
             Close();
         }
     }

@@ -10,7 +10,8 @@ namespace DBModel
     {
         public Guid Id { get; set; }
         public string Login { get; set; }
-        public string Password { get; set; }
-        public List<Configuration> Configuration { get; set; }
+        public string Name { get; set; }
+        public string SurName { get; set; }
+        public string Phone { get; set; }
     }
 }

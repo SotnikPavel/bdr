@@ -5,35 +5,34 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="525">
+        Title="MainWindow" Height="350" Width="725">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="18"></RowDefinition>
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <Menu Grid.Row="0">
-            <MenuItem Click="MenuItem_Click" >
+            <MenuItem Name="Classes" Click="MenuItem_Click" >
                 <MenuItem.Header>Классы</MenuItem.Header>
             </MenuItem>
-            <MenuItem Click="MenuItem_Click_2" >
+            <MenuItem Name="Producters" Click="MenuItem_Click_2" >
                 <MenuItem.Header>Производители</MenuItem.Header>
             </MenuItem>
-            <MenuItem Click="MenuItem_Click_1" >
+            <MenuItem Name="Shells"  Click="MenuItem_Click_1" >
                 <MenuItem.Header>Корпуса</MenuItem.Header>
             </MenuItem>
-            <MenuItem Click="MenuItem_Click_3" >
+            <MenuItem Name="Components"  Click="MenuItem_Click_3" >
                 <MenuItem.Header>Детали</MenuItem.Header>
             </MenuItem>
-            <MenuItem Click="MenuItem_Click_4" >
+            <MenuItem Name="Report"  Click="MenuItem_Click_4" >
                 <MenuItem.Header>Отчет</MenuItem.Header>
             </MenuItem>
-            <MenuItem >
-                <MenuItem.Header>Наличие</MenuItem.Header>
+            <MenuItem Name="Import"  Click="MenuItem_Click_5" >
+                <MenuItem.Header>Импорт</MenuItem.Header>
             </MenuItem>
-            <MenuItem >
-                <MenuItem.Header>Поставщики</MenuItem.Header>
+            <MenuItem Name="Propertys"  Click="MenuItem_Click_6" >
+                <MenuItem.Header>Настройки</MenuItem.Header>
             </MenuItem>
-
         </Menu>
     </Grid>
 </Window>

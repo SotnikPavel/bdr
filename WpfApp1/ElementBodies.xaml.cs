@@ -19,15 +19,24 @@ namespace WpfApp1
     /// </summary>
     public partial class ElementBodies : Window
     {
-        public ElementBodies()
+        Guid UserId;
+        public ElementBodies(int lang, Guid userId)
         {
             InitializeComponent();
+            UserId = userId;
+            if (lang == 1)
+            {
+                Change.Header = "үзгәртергә";
+                Add.Header = "өстәргә";
+                Delete.Header = "бетерә";
+
+            }
             Reload();
         }
 
         private void MenuItem_Click(object sender, RoutedEventArgs e)
         {
-            ElementBodiesAdd elementBodiesAdd = new ElementBodiesAdd();
+            ElementBodiesAdd elementBodiesAdd = new ElementBodiesAdd(UserId);
             elementBodiesAdd.ShowDialog();
             Reload();
         }
@@ -35,6 +44,24 @@ namespace WpfApp1
         private void Reload()
         {
             DataContext =  DBWorker.ShellTypes.GetList();
+        }
+
+        private void Change_Click(object sender, RoutedEventArgs e)
+        {
+            if(listView.SelectedItem != null)
+            {
+                ElementBodiesChange elementBodiesChange = new ElementBodiesChange((DBModel.ShellType)listView.SelectedItem);
+                elementBodiesChange.ShowDialog();
+            }
+        }
+
+        private void Delete_Click(object sender, RoutedEventArgs e)
+        {
+            if (listView.SelectedItem != null)
+            {
+                DBWorker.ShellTypes.Delete((DBModel.ShellType)listView.SelectedItem);
+                Reload();
+            }
         }
     }
 }
