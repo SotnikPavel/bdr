@@ -9,7 +9,7 @@ namespace DBWorker
 {
     public class DBWorker
     {
-        public static void Init()
+        public static void Init(Guid userId)
         {
             using (UserContext DB = new UserContext())
             {
@@ -63,6 +63,16 @@ namespace DBWorker
                     cc.Description = "Base";
                     cc.Name = "Base";
                     DB.ShellTypes.Add(cc);
+                }
+
+                var nelst = DB.Storages.Where(n => n.Id == Guid.Empty).FirstOrDefault();
+                if (nels == null)
+                {
+                    Storage cc = new Storage();
+                    cc.Id = Guid.Empty;
+                    cc.Description = "Base";
+                    cc.Name = "Base";
+                    DB.Storages.Add(cc);
                 }
 
                 DB.SaveChanges();

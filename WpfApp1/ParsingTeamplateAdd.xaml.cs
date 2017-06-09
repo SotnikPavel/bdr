@@ -31,7 +31,8 @@ namespace WpfApp1
         {
             if (baseElement != null)
             {
-                DBWorker.Parsing.Add(StartUrl.Text, TeamplateName.Text, NextUrl.Text, PathToElementPage.Text, PathToName.Text, baseElement.Id, PathToProducter.Text, PathToShellType.Text);
+                Guid parsingId = DBWorker.Parsing.Add(StartUrl.Text, TeamplateName.Text, NextUrl.Text, PathToElementPage.Text, PathToName.Text, baseElement.Id, PathToProducter.Text, PathToShellType.Text);
+                DBWorker.ParsingOtherFields.Add(parsingId, baseElement.Id);
                 Close();
             }
         }

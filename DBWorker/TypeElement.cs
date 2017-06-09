@@ -64,6 +64,16 @@ namespace DBWorker
             return componentClasses;
         }
 
+        public List<DBModel.TypeElement> GetList()
+        {
+            List<DBModel.TypeElement> componentClasses;
+            using (UserContext DB = new UserContext())
+            {
+                componentClasses = DB.TypeElements.Where(n => n.Id != Guid.Empty).ToList();
+            }
+            return componentClasses;
+        }
+
         public static void Add(string name, string description, Guid elementClassId)
         {
             using (UserContext DB = new UserContext())

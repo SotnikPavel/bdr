@@ -69,5 +69,21 @@ namespace WpfApp1
             }
             Reload();
         }
+        
+
+        private void listView_SelectionChanged(object sender, MouseButtonEventArgs e)
+        {
+            ComponentStorages componentStorages = new ComponentStorages(UserId, ((DataWorker.Component)listView.SelectedItem).Id);
+            componentStorages.ShowDialog();
+        }
+
+        private void MenuItem_Field(object sender, RoutedEventArgs e)
+        {
+            if(listView.SelectedItem != null)
+            {
+                TypeElementFieldComponents typeElementFieldComponents = new TypeElementFieldComponents((((DataWorker.Component)listView.SelectedItem).Id));
+                typeElementFieldComponents.ShowDialog();
+            }
+        }
     }
 }

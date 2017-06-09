@@ -1,0 +1,33 @@
+﻿<Window x:Class="WpfApp1.Availability"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Наличие Компонентов" Height="300" Width="500">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="40" />
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.5*" />
+                <ColumnDefinition Width="0.5*"/>
+            </Grid.ColumnDefinitions>
+            <Button Grid.Column="0" Content="Выбрать место хранения" Margin="5" Click="Button_Click"/>
+            <Button Grid.Column="1" Content="Считать место хранения" Margin="5" Click="Button_Click_1"/>
+        </Grid>
+        <ListView Name="listView" Grid.Row="1" ItemsSource="{Binding .}">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="120" Header="Название" DisplayMemberBinding="{Binding Path=Name}" />
+                    <GridViewColumn Width="120" Header="Класс" DisplayMemberBinding="{Binding Path=Class}"/>
+                    <GridViewColumn Width="120" Header="Производитель" DisplayMemberBinding="{Binding Path=Producer}"/>
+                    <GridViewColumn Width="120" Header="Тип корпуса" DisplayMemberBinding="{Binding Path=BodyType}"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
+    </Grid>
+</Window>

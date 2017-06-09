@@ -47,6 +47,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Availability.cs" />
     <Compile Include="Cell.cs" />
     <Compile Include="CellAdmission.cs" />
     <Compile Include="CellConsumption.cs" />
@@ -63,6 +64,7 @@
     <Compile Include="ImportPage.cs" />
     <Compile Include="ImportPageParsingOption.cs" />
     <Compile Include="ParsingComponents.cs" />
+    <Compile Include="ParsingOtherField.cs" />
     <Compile Include="ParsingPage.cs" />
     <Compile Include="ParsingParameter.cs" />
     <Compile Include="PhoneNumber.cs" />
@@ -77,6 +79,8 @@
     <Compile Include="Storage.cs" />
     <Compile Include="TechnicalDocumentation.cs" />
     <Compile Include="TypeElement.cs" />
+    <Compile Include="TypeElementField.cs" />
+    <Compile Include="TypeElementFieldComponents.cs" />
     <Compile Include="Unit.cs" />
     <Compile Include="UnitType.cs" />
     <Compile Include="User.cs" />

@@ -20,6 +20,8 @@ namespace DBModel
         public List<ParsingPage> ParsingPages { get; set; }
         public List<TechnicalDocumentation> TechnicalDocumentations { get; set; }
         public List<Device> Devices { get; set; }
+        public List<TypeElementFieldComponents> TypeElementFieldComponentss { get; set; }
+        public List<Availability> Availabilitys { get; set; }
         public ShellType ShellType { get; set; }
         public Producer Producer { get; set; }
         public TypeElement TypeElement { get; set; }

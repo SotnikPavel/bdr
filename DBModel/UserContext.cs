@@ -13,6 +13,7 @@ namespace DBModel
         public UserContext() : base("Server=localhost\\SQLEXPRESS;Database=master;Trusted_Connection=True;Initial Catalog=testbdr444;User ID=bdruser;Password=123ewqasdcxz")
         {
         }
+        public DbSet<Availability> Availabilitys { get; set; }
         public DbSet<Cell> Cells { get; set; }
         public DbSet<CellAdmission> CellAdmissions { get; set; }
         public DbSet<CellConsumption> CellConsumptions { get; set; }
@@ -44,6 +45,9 @@ namespace DBModel
         public DbSet<UnitType> UnitTypes { get; set; }
         public DbSet<User> Users { get; set; }
         public DbSet<ParsingComponents> ParsingComponents { get; set; }
+        public DbSet<TypeElementFieldComponents> TypeElementFieldComponentss { get; set; }
         public DbSet<TypeElement> TypeElements { get; set; }
+        public DbSet<TypeElementField> TypeElementFields { get; set; }
+        public DbSet<ParsingOtherField> ParsingOtherFields { get; set; }   
     }
 }

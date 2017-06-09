@@ -20,15 +20,17 @@ namespace Parsing
         string PathToProducter;
         string PathToShellType;
         string SiteName;
+        Guid ParsingId;
 
         public ParsingSite(string parsingTeamplateName)
         {
             var parsingTeamplate = DBWorker.Parsing.GetByName(parsingTeamplateName);
-            ParsingTeamlateLoad(parsingTeamplate.StartUrl, parsingTeamplate.NextUrl, parsingTeamplate.PathToElementPage, parsingTeamplate.PathToName, parsingTeamplate.ComponentsClassId, parsingTeamplate.PathToProducter, parsingTeamplate.PathToShellType);
+            ParsingTeamlateLoad(parsingTeamplate.Id, parsingTeamplate.StartUrl, parsingTeamplate.NextUrl, parsingTeamplate.PathToElementPage, parsingTeamplate.PathToName, parsingTeamplate.ComponentsClassId, parsingTeamplate.PathToProducter, parsingTeamplate.PathToShellType);
         }
 
-        public void ParsingTeamlateLoad(string startUrl, string nextUrl, string pathToElementPage, string pathToName, Guid componentsClassId, string pathToProducter, string pathToShellType)
+        public void ParsingTeamlateLoad(Guid parsingTeamplateId, string startUrl, string nextUrl, string pathToElementPage, string pathToName, Guid componentsClassId, string pathToProducter, string pathToShellType)
         {
+            ParsingId = parsingTeamplateId;
             StartUrl = startUrl;
             NextUrl = nextUrl;
             PathToElementPage = pathToElementPage;
@@ -55,7 +57,7 @@ namespace Parsing
                         string purl = NextUrl.Replace("{num}", number.ToString());
                         url += purl;
                     }
-                    result = ParsingPage(url, userId);
+                    result = ParsingPage(url, userId, ParsingId);
                     number++;
                 }
             }
@@ -65,7 +67,7 @@ namespace Parsing
             }
         }
 
-        public bool ParsingPage(string url, Guid userId)
+        public bool ParsingPage(string url, Guid userId, Guid parsingId)
         {
             HtmlDocument doc = new HtmlDocument();
             var req = GetRequest(url);
@@ -83,7 +85,7 @@ namespace Parsing
                     {
                         string urlPage = node.InnerHtml.Substring(node.InnerHtml.IndexOf("href=\"") + 6, node.InnerHtml.Length - node.InnerHtml.IndexOf("href=\"") - 6);
                         urlPage = SiteName + urlPage.Substring(0, urlPage.IndexOf("\""));
-                        result = ParsingElement(urlPage, userId);
+                        result = ParsingElement(urlPage, userId, parsingId);
                         elementPageNum++;
                     }
                     catch(Exception ex)
@@ -100,8 +102,10 @@ namespace Parsing
             }
         }
 
-        public bool ParsingElement(string url, Guid userId)
+        public bool ParsingElement(string url, Guid userId, Guid parsingId)
         {
+            var listParsingOtherFields = DBWorker.ParsingOtherFields.GetListByParsingComponentsId(parsingId);
+
             HtmlDocument doc = new HtmlDocument();
             var req = GetRequest(url);
             if(!String.IsNullOrEmpty(req))
@@ -133,7 +137,20 @@ namespace Parsing
                         shellTypeId = DBWorker.ShellTypes.GetIdByName(shellTypeName).Value;
                     }
                 }
-                DBWorker.Components.Add(userId, name, producterId, shellTypeId, ComponentsClassId);
+                Guid res = DBWorker.Components.Add(userId, name, producterId, shellTypeId, ComponentsClassId);
+                foreach(var parsingOtherField in listParsingOtherFields)
+                {
+                    if(!string.IsNullOrEmpty(parsingOtherField.Value))
+                    {
+                        HtmlNode node = doc.DocumentNode.SelectSingleNode(parsingOtherField.Value);
+                        if (node != null)
+                        {
+                            var component = DBWorker.TypeElementFieldComponents.GetGuidByComponentIdTypeElementFieldId(res, parsingOtherField.TypeElementFieldId);
+                            DBWorker.TypeElementFieldComponents.Change(component.Id, node.InnerText);
+                        }
+                    }
+                   
+                }
                 return true;
             }
             else

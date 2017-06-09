@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Parsing" Height="300" Width="400">
+        Title="Parsing" Height="300" Width="600">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"></RowDefinition>
@@ -15,6 +15,7 @@
             <MenuItem Header="Добавить шаблон парсинга" Click="MenuItem_Click"></MenuItem>
             <MenuItem Header="Выполнить" Click="MenuItem_Click_1"></MenuItem>
             <MenuItem Header="Удалить" Click="MenuItem_Click_2"></MenuItem>
+            <MenuItem Header="Изменить дополнительные поля" Click="MenuItem_OtherField"></MenuItem>
         </Menu>
         <ListView Name="parsingTeamplates" Grid.Row="1" ItemsSource="{Binding .}">
             <ListView.View>

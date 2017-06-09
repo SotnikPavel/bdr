@@ -80,5 +80,22 @@ namespace WpfApp1
             Settings set = new Settings(lang, userId);
             set.ShowDialog();
         }
+
+        private void MenuItem_Click_7(object sender, RoutedEventArgs e)
+        {
+            Storage storage = new Storage(userId);
+            storage.ShowDialog();
+        }
+
+        private void MenuItem_Click_8(object sender, RoutedEventArgs e)
+        {
+            Availability availability = new Availability(userId);
+            availability.ShowDialog();
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            Environment.Exit(0);
+        }
     }
 }

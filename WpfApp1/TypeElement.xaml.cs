@@ -66,5 +66,14 @@ namespace WpfApp1
                 Reload();
             }
         }
+
+        private void Field_Click(object sender, RoutedEventArgs e)
+        {
+            if (listView.SelectedItem != null)
+            {
+                TypeElementField typeElementField = new TypeElementField(((DataWorker.TypeElementClasses)(listView.SelectedItem)).Id);
+                typeElementField.ShowDialog();
+            }
+        }
     }
 }

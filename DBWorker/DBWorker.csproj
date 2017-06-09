@@ -50,14 +50,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Availability.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Components.cs" />
     <Compile Include="ElementClasses.cs" />
     <Compile Include="Parsing.cs" />
+    <Compile Include="ParsingOtherFields.cs" />
     <Compile Include="Producers.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="ShellTypes.cs" />
+    <Compile Include="Storages.cs" />
     <Compile Include="TypeElement.cs" />
+    <Compile Include="TypeElementFieldComponents.cs" />
+    <Compile Include="TypeElementFields.cs" />
     <Compile Include="User.cs" />
   </ItemGroup>
   <ItemGroup>

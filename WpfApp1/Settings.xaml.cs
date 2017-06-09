@@ -31,12 +31,25 @@ namespace WpfApp1
                 Phone.Content = "Телефон";
                 Save.Content = "Саклап";
             }
-            DataContext = DBWorker.User.GetUserById(UserId);
+            var user = DBWorker.User.GetUserById(UserId);
+            DataContext = user;
+            RfidWorker.RfidRead rw = new RfidWorker.RfidRead();
+            List<string> ports = rw.GetPorts();
+            foreach(string port in ports)
+            {
+                Port.Items.Add(port);
+            }
+            Port.SelectedIndex = Port.Items.IndexOf(user.PortName);
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            DBWorker.User.AddData(UserId, Name.Text, LastName.Text, Number.Text);
+            string portName = "";
+            if(Port.SelectedItem != null)
+            {
+                portName = Port.SelectedItem.ToString();
+            }
+            DBWorker.User.AddData(UserId, Name.Text, LastName.Text, Number.Text, portName);
             Close();
         }
     }

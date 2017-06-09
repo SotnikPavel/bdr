@@ -53,7 +53,7 @@ namespace WpfApp1
 
         private void Parent_Click(object sender, RoutedEventArgs e)
         {
-            TypeElementClassesBaseClassSelect elementClassesBaseClassSelect = new TypeElementClassesBaseClassSelect { };
+            TypeElementClassesBaseClassSelect elementClassesBaseClassSelect = new TypeElementClassesBaseClassSelect();
             elementClassesBaseClassSelect.ShowDialog();
 
             if (elementClassesBaseClassSelect.BaseElement != null)

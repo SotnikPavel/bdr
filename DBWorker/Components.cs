@@ -9,6 +9,15 @@ namespace DBWorker
 {
     public class Components
     {
+        public static List<Component> GetListInType(Guid typeElementId)
+        {
+            List<Component> producer;
+            using (UserContext DB = new UserContext())
+            {
+                producer = DB.Components.Where(n => n.ComponentClassId == typeElementId).ToList();
+            }
+            return producer;
+        }
         public List<Component> GetList(Guid userId)
         {
             List<Component> producer;
@@ -18,7 +27,7 @@ namespace DBWorker
             }
             return producer;
         }
-        public static void Add(Guid userId, string name, Guid producerId, Guid shellTypeId, Guid componentClassId)
+        public static Guid Add(Guid userId, string name, Guid producerId, Guid shellTypeId, Guid typeElementId)
         {
             using (UserContext DB = new UserContext())
             {
@@ -28,9 +37,11 @@ namespace DBWorker
                 component.Name = name;
                 component.ProducerId = producerId;
                 component.ShellTypeId = shellTypeId;
-                component.ComponentClassId = componentClassId;
+                component.ComponentClassId = typeElementId;
                 DB.Components.Add(component);
                 DB.SaveChanges();
+                TypeElementFields.AddExemplar(typeElementId, component.Id);
+                return component.Id;
             }
         }
         public static void Change(Guid oldId, string name, Guid producerId, Guid shellTypeId, Guid componentClassId)

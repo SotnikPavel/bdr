@@ -61,5 +61,15 @@ namespace WpfApp1
                 Reload();
             }
         }
+
+        private void MenuItem_OtherField(object sender, RoutedEventArgs e)
+        {
+
+            if (parsingTeamplates.SelectedItem != null)
+            {
+                ParsingTeamplateOtherField parsingTeamplateOtherField = new ParsingTeamplateOtherField(parsingTeamplates.SelectedItem.ToString());
+                parsingTeamplateOtherField.ShowDialog();
+            }
+        }
     }
 }

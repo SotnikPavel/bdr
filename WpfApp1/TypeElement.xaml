@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="Типы элементов" Height="300" Width="300">
+        Title="Типы элементов" Height="300" Width="500">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
@@ -16,6 +16,7 @@
             <MenuItem Name="Add" Header="Добавить" Click="Add_click" />
             <MenuItem Name="Change" Header="Изменить" Click="Change_Click"/>
             <MenuItem Name="Delete" Header="Удалить" Click="Delete_Click"/>
+            <MenuItem Name="Field" Header="Поля типа элементов" Click="Field_Click"/>
         </Menu>
         <ListView x:Name="listView" Grid.Row="1" ItemsSource="{Binding Path=.}">
             <ListView.View>

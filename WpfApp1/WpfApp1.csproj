@@ -61,8 +61,20 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Availability.xaml.cs">
+      <DependentUpon>Availability.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ComponentsChange.xaml.cs">
       <DependentUpon>ComponentsChange.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentStorages.xaml.cs">
+      <DependentUpon>ComponentStorages.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentStoragesAdd.xaml.cs">
+      <DependentUpon>ComponentStoragesAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ComponentStorageShange.xaml.cs">
+      <DependentUpon>ComponentStorageShange.xaml</DependentUpon>
     </Compile>
     <Compile Include="ElementBodiesChange.xaml.cs">
       <DependentUpon>ElementBodiesChange.xaml</DependentUpon>
@@ -82,17 +94,35 @@
     <Compile Include="ParsingTeamplateAdd.xaml.cs">
       <DependentUpon>ParsingTeamplateAdd.xaml</DependentUpon>
     </Compile>
+    <Compile Include="ParsingTeamplateOtherField.xaml.cs">
+      <DependentUpon>ParsingTeamplateOtherField.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ParsingTypeSelect.xaml.cs">
       <DependentUpon>ParsingTypeSelect.xaml</DependentUpon>
     </Compile>
     <Compile Include="ProducterChange.xaml.cs">
       <DependentUpon>ProducterChange.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Read.xaml.cs">
+      <DependentUpon>Read.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Reports.xaml.cs">
       <DependentUpon>Reports.xaml</DependentUpon>
     </Compile>
     <Compile Include="Settings.xaml.cs">
       <DependentUpon>Settings.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Storage.xaml.cs">
+      <DependentUpon>Storage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StorageAdd.xaml.cs">
+      <DependentUpon>StorageAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StorageChanges.xaml.cs">
+      <DependentUpon>StorageChanges.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="StoragesBaseClassSelect.xaml.cs">
+      <DependentUpon>StoragesBaseClassSelect.xaml</DependentUpon>
     </Compile>
     <Compile Include="TypeElement.xaml.cs">
       <DependentUpon>TypeElement.xaml</DependentUpon>
@@ -106,6 +136,22 @@
     <Compile Include="TypeElementClassesBaseClassSelect.xaml.cs">
       <DependentUpon>TypeElementClassesBaseClassSelect.xaml</DependentUpon>
     </Compile>
+    <Compile Include="TypeElementField.xaml.cs">
+      <DependentUpon>TypeElementField.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TypeElementFieldComponents.xaml.cs">
+      <DependentUpon>TypeElementFieldComponents.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TypeElementFieldComponentsAdd.xaml.cs">
+      <DependentUpon>TypeElementFieldComponentsAdd.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="TypeElemntFieldAdd.xaml.cs">
+      <DependentUpon>TypeElemntFieldAdd.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Availability.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Components.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -115,6 +161,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="ComponentsChange.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComponentStorages.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComponentStoragesAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="ComponentStorageShange.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -195,6 +253,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="ParsingTeamplateOtherField.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="ParsingTypeSelect.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -211,11 +273,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Read.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Reports.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Settings.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Storage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StorageAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StorageChanges.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="StoragesBaseClassSelect.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -232,6 +314,22 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="TypeElementClassesBaseClassSelect.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TypeElementField.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TypeElementFieldComponents.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TypeElementFieldComponentsAdd.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="TypeElemntFieldAdd.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -285,6 +383,10 @@
     <ProjectReference Include="..\Parsing\Parsing.csproj">
       <Project>{cd085fc5-aa95-4ed1-863c-ee4c91fced98}</Project>
       <Name>Parsing</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\RfidWorker\RfidWorker.csproj">
+      <Project>{bee3b4a7-800d-49ed-863a-8cec59f07309}</Project>
+      <Name>RfidWorker</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

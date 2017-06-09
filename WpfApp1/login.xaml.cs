@@ -44,13 +44,16 @@ namespace WpfApp1
 
         private void Add_Click(object sender, RoutedEventArgs e)
         {
-            bool res = DBWorker.User.Add(Name.Text);
-            if(!res)
+            DBModel.User res = DBWorker.User.Add(Name.Text);
+            if(res == null)
             {
                 Error er = new Error("User Exists");
                 er.ShowDialog();
             }
-            DBWorker.DBWorker.Init();
+            else
+            {
+                DBWorker.DBWorker.Init(res.Id);
+            }
         }
     }
 }

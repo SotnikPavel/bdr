@@ -13,6 +13,7 @@
                 <RowDefinition Height="40"></RowDefinition>
                 <RowDefinition Height="40"></RowDefinition>
                 <RowDefinition Height="40"></RowDefinition>
+                <RowDefinition Height="40"></RowDefinition>
 
 
             </Grid.RowDefinitions>
@@ -40,7 +41,16 @@
                 <Label Name="Phone" Content="Номер телефона" Grid.Column="0"/>
                 <TextBox Name="Number"  Text="{Binding Phone}" Grid.Column="1"/>
             </Grid>
-            <Button Name="Save" Content="Сохранить" Grid.Row="3" Click="Button_Click"/>
+            <Grid Grid.Row="3" Margin="5">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                    <ColumnDefinition Width="0.5*"></ColumnDefinition>
+                </Grid.ColumnDefinitions>
+                <Label Content="Порт" Grid.Column="0"/>
+                <ComboBox Name="Port" Grid.Column="1">
+                </ComboBox>
+            </Grid>
+            <Button Name="Save" Content="Сохранить" Grid.Row="4" Click="Button_Click"/>
                
         </Grid>
     </Grid>

@@ -15,8 +15,9 @@
             <MenuItem Name="Add" Header="Добавить" Click="MenuItem_Click"/>
             <MenuItem Name="Change" Header="Изменить" Click="Change_Click"/>
             <MenuItem Name="Delete" Header="Удалить" Click="MenuItem_Click_1"/>
+            <MenuItem Name="Field" Header="Дополнительные поля" Click="MenuItem_Field"/>
         </Menu>
-        <ListView Name="listView" Grid.Row="1" ItemsSource="{Binding .}">
+        <ListView Name="listView" Grid.Row="1" ItemsSource="{Binding .}" MouseDoubleClick="listView_SelectionChanged" >
             <ListView.View>
                 <GridView>
                     <GridViewColumn Width="120" Header="Название" DisplayMemberBinding="{Binding Path=Name}" />

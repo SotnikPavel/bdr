@@ -36,23 +36,22 @@ namespace DataWorker
             BaseClassId = DBWorkerClass.GetParent(typeElementClass.ComponentClassId).Id;
         }
 
-        public TypeElementClasses(string name, string description, Guid id, ObservableCollection<TypeElementClasses> ee)
+        public TypeElementClasses(string name, string description, Guid id)
         {
             Name = name;
             Description = description;
-            TypeElementClassesData = ee;
             Id = id;
         }
 
         private ObservableCollection<TypeElementClasses> GetClassesByParentId(Guid parentId)
         {
             ObservableCollection<TypeElementClasses> rc = new ObservableCollection<TypeElementClasses>();
-            var componentClasses = DBWorker.GetByParentId(parentId);
+            var componentClasses =  DBWorker.GetList();
             foreach (var componentClass in componentClasses)
             {
                 if (componentClass.Id != Guid.Empty)
                 {
-                    rc.Add(new TypeElementClasses(componentClass.Name, componentClass.Description, componentClass.Id, GetClassesByParentId(componentClass.Id)));
+                    rc.Add(new TypeElementClasses(componentClass.Name, componentClass.Description, componentClass.Id));
                 }
             }
             return rc;

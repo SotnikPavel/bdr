@@ -61,6 +61,10 @@
       <Project>{32c0b285-27f2-4b44-b765-b592835120ae}</Project>
       <Name>DBWorker</Name>
     </ProjectReference>
+    <ProjectReference Include="..\RfidWorker\RfidWorker.csproj">
+      <Project>{bee3b4a7-800d-49ed-863a-8cec59f07309}</Project>
+      <Name>RfidWorker</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

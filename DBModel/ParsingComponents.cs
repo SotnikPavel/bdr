@@ -17,5 +17,6 @@ namespace DBModel
         public Guid ComponentsClassId { get; set; }
         public string PathToProducter { get; set; }
         public string PathToShellType { get; set; }
+        public List<ParsingOtherField> ParsingOtherFields { get; set; }
     }
 }

@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="350" Width="725">
+        Title="MainWindow" Height="350" Width="725" Closed="Window_Closed">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="18"></RowDefinition>
@@ -24,6 +24,9 @@
             <MenuItem Name="Components"  Click="MenuItem_Click_3" >
                 <MenuItem.Header>Детали</MenuItem.Header>
             </MenuItem>
+            <MenuItem Name="Storages"  Click="MenuItem_Click_7" >
+                <MenuItem.Header>Места хранения</MenuItem.Header>
+            </MenuItem>
             <MenuItem Name="Report"  Click="MenuItem_Click_4" >
                 <MenuItem.Header>Отчет</MenuItem.Header>
             </MenuItem>
@@ -32,6 +35,9 @@
             </MenuItem>
             <MenuItem Name="Propertys"  Click="MenuItem_Click_6" >
                 <MenuItem.Header>Настройки</MenuItem.Header>
+            </MenuItem>
+            <MenuItem Name="Availability"  Click="MenuItem_Click_8" >
+                <MenuItem.Header>Наличие</MenuItem.Header>
             </MenuItem>
         </Menu>
     </Grid>

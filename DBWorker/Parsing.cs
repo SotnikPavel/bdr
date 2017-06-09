@@ -10,7 +10,7 @@ namespace DBWorker
 {
     public class Parsing
     {
-        public static void Add(string StartUrl, string Name, string NextUrl, string PathToElementPage, string PathToName, Guid ComponentsClassId, string PathToProducter, string PathToShellType)
+        public static Guid Add(string StartUrl, string Name, string NextUrl, string PathToElementPage, string PathToName, Guid ComponentsClassId, string PathToProducter, string PathToShellType)
         {
             using (UserContext DB = new UserContext())
             {
@@ -26,6 +26,7 @@ namespace DBWorker
                 parsingComponents.PathToShellType = PathToShellType;
                 DB.ParsingComponents.Add(parsingComponents);
                 DB.SaveChanges();
+                return parsingComponents.Id;
             }
         }
 
